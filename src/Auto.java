@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Auto {
     // Definiëren: Variabelen
     static Scanner invoer = new Scanner(System.in);
-    private int snelheid;
-    private String merk;
-    private int kilometerstand;
+    private int snelheid = 100;
+    private String merk = "Toyota";
+    private int kilometerstand = 12000;
     // Einde Definiëren: Variabelen
 
     public static void main(String[] args) { // Main
 
-        Auto auto = new Auto("Toyota", 100, 12000);
+        Auto auto = new Auto();
         System.out.print("\nSnelheid: " + auto.snelheid);
         System.out.print("\nMerk: " + auto.merk);
         System.out.print("\nKilometerstand: " + auto.kilometerstand);
@@ -24,7 +24,7 @@ public class Auto {
         System.out.print("\nMerk: " + Tesla.merk);
         System.out.print("\nKilometerstand: " + Tesla.kilometerstand);
         System.out.println();
-        Tesla.motorGegevens();
+        Auto.motorGegevens();
 
         System.out.print("\n―――――――――――――――――――――――――\n");
         System.out.print("\nVoer merk in: ");
@@ -63,7 +63,7 @@ public class Auto {
         System.out.print("\nMerk: " + autoInvoer.merk);
         System.out.print("\nKilometerstand: " + autoInvoer.kilometerstand);
         System.out.println();
-        autoInvoer.motorGegevens();
+        Auto.motorGegevens();
 
 
     } // Einde Main
@@ -73,6 +73,14 @@ public class Auto {
 //        merk = "Toyota";
 //        kilometerstand = 20000;
 //    }
+
+
+    public Auto() {
+        this.merk = merk;
+        this.snelheid = snelheid;
+        this.kilometerstand = kilometerstand;
+    }
+
 
     // Constructor Auto
     public Auto(String merk, int snelheid, int kilometerstand) {
@@ -85,6 +93,9 @@ public class Auto {
 
 //        setMerk("merk");
     } // Einde Constructor Auto
+
+
+
 
     // Definiëren: motorGegevens
     public static String motorGegevens() {
